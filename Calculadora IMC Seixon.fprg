@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Calculadora Seixon"/>
+        <attribute name="authors" value="T1DEV-T2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-13 03:40:25 "/>
+        <attribute name="created" value="VDFERVYtVDI7REVTS1RPUC0zQk5WSTM0OzIwMjUtMDItMTM7IjAyOjA1OjMzICI7Mjc1OA=="/>
+        <attribute name="edited" value="VDFERVYtVDI7REVTS1RPUC0zQk5WSTM0OzIwMjUtMDItMTM7IjAzOjQwOjI1ICI7NDsyODcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Peso" type="Real" array="False" size=""/>
+            <declare name="Altura" type="Real" array="False" size=""/>
+            <declare name="IMC" type="Real" array="False" size=""/>
+            <output expression="&quot;Ol&#225;, seja bem-vindo a calculadora Seixon IMC.&quot;" newline="True"/>
+            <output expression="&quot;Fundada e criada por Enrico Trevisan, a.k.a Grilo.&quot;" newline="True"/>
+            <output expression="&quot;Para come&#231;ar, digite seu peso atual.&quot;" newline="True"/>
+            <input variable="Peso"/>
+            <output expression="&quot;Obrigado. Agora, digite sua altura atual.&quot;" newline="True"/>
+            <input variable="Altura"/>
+            <assign variable="IMC" expression="peso/(altura*altura)"/>
+            <output expression="&quot;O c&#225;lculo IMC &#233; &quot; &amp;IMC&amp; &quot;.&quot;" newline="True"/>
+            <if expression="IMC &lt;= 18.5">
+                <then>
+                    <output expression="&quot;Sua classifica&#231;&#227;o &#233; abaixo do peso.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="IMC &gt;= 18.5 &amp;&amp; IMC &lt;= 24.9">
+                        <then>
+                            <output expression="&quot;Sua classifica&#231;&#227;o &#233; peso normal.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="IMC &gt;= 25 &amp;&amp; IMC &lt;= 29.9">
+                                <then>
+                                    <output expression="&quot;Sua classifica&#231;&#227;o &#233; excesso de peso.&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="IMC &gt;= 30 &amp;&amp; IMC &lt;= 34.9">
+                                        <then>
+                                            <output expression="&quot;Sua classifica&#231;&#227;o &#233; obeso(a).&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="IMC &gt;= 35">
+                                                <then>
+                                                    <output expression="&quot;Sua classifica&#231;&#227;o &#233; extrema obesidade.&quot;" newline="True"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Muito obrigado por usar a calculadora IMC Seixon.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
